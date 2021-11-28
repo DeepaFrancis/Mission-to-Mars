@@ -2,7 +2,8 @@
 from splinter import Browser
 from bs4 import BeautifulSoup as soup
 from webdriver_manager.chrome import ChromeDriverManager
-
+import datetime as dt
+import pandas as pd 
 
 def scrape_all():
     # Initiate headless driver for deployment
@@ -23,7 +24,7 @@ def scrape_all():
     # Stop webdriver and return data
     browser.quit()
     return data
-    
+
 def mars_news(browser):
 
     # Scrape Mars News
